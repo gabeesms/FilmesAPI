@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "FilmesAPI.Controllers.FilmeController",
+    "Method": "AdicionaFilme",
+    "RelativePath": "Filme",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filme",
+        "Type": "FilmesAPI.Models.Filme",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FilmesAPI.Controllers.FilmeController",
+    "Method": "RecuperarFilmes",
+    "RelativePath": "Filme",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FilmesAPI.Models.Filme, FilmesAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
