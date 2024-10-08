@@ -24,5 +24,17 @@
         <member name="M:FilmesAPI.Migrations.CriandoTabelaFilme.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:FilmesAPI.Migrations.CinemaeEndereco">
+            <inheritdoc />
+        </member>
+        <member name="M:FilmesAPI.Migrations.CinemaeEndereco.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:FilmesAPI.Migrations.CinemaeEndereco.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:FilmesAPI.Migrations.CinemaeEndereco.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

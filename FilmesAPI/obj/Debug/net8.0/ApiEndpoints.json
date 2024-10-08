@@ -1,5 +1,183 @@
 [
   {
+    "ContainingType": "FilmesApi.Controllers.CinemaController",
+    "Method": "AdicionaCinema",
+    "RelativePath": "Cinema",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cinemaDto",
+        "Type": "FilmesAPI.Data.Dtos.CreateCinemaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FilmesApi.Controllers.CinemaController",
+    "Method": "RecuperaCinemas",
+    "RelativePath": "Cinema",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[FilmesAPI.Data.Dtos.ReadCinemaDto, FilmesAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FilmesApi.Controllers.CinemaController",
+    "Method": "RecuperaCinemasPorId",
+    "RelativePath": "Cinema/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FilmesApi.Controllers.CinemaController",
+    "Method": "AtualizaCinema",
+    "RelativePath": "Cinema/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cinemaDto",
+        "Type": "FilmesAPI.Data.Dtos.UpdateCinemaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FilmesApi.Controllers.CinemaController",
+    "Method": "DeletaCinema",
+    "RelativePath": "Cinema/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FilmesApi.Controllers.EnderecoController",
+    "Method": "AdicionaEndereco",
+    "RelativePath": "Endereco",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "enderecoDto",
+        "Type": "FilmesAPI.Data.Dtos.CreateEnderecoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FilmesApi.Controllers.EnderecoController",
+    "Method": "RecuperaEnderecos",
+    "RelativePath": "Endereco",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[FilmesAPI.Data.Dtos.ReadEnderecoDto, FilmesAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FilmesApi.Controllers.EnderecoController",
+    "Method": "RecuperaEnderecosPorId",
+    "RelativePath": "Endereco/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FilmesApi.Controllers.EnderecoController",
+    "Method": "AtualizaEndereco",
+    "RelativePath": "Endereco/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "enderecoDto",
+        "Type": "FilmesAPI.Data.Dtos.UpdateEnderecoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FilmesApi.Controllers.EnderecoController",
+    "Method": "DeletaEndereco",
+    "RelativePath": "Endereco/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FilmesAPI.Controllers.FilmeController",
     "Method": "AdicionaFilme",
     "RelativePath": "Filme",
