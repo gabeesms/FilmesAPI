@@ -18,7 +18,7 @@ public class FilmeController : ControllerBase
     {
         _context = context;
         _mapper = mapper;
-  
+
     }
 
     /// <summary>
@@ -29,22 +29,29 @@ public class FilmeController : ControllerBase
     /// <response code="201">Caso inserção seja feita com sucesso</response>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
-    public IActionResult AdicionaFilme([FromBody]CreateFilmeDto filmeDto)
+    public IActionResult AdicionaFilme([FromBody] CreateFilmeDto filmeDto)
     {
-      
+
         Filme filme = _mapper.Map<Filme>(filmeDto);
         _context.Filmes.Add(filme);
         _context.SaveChanges();
         return CreatedAtAction(nameof(RecuperarFilmePorId),
-               new {id = filme.Id}, filme);
+               new { id = filme.Id }, filme);
 
     }
 
     [HttpGet]
     public IEnumerable<ReadFilmeDto> RecuperaFilmes([FromQuery] int skip = 0,
-        [FromQuery] int take = 50)
+        [FromQuery] int take = 50,
+        [FromQuery] string? nomeCinema = null)
+
     {
-        return _mapper.Map<List<ReadFilmeDto>>(_context.Filmes.Skip(skip).Take(take));
+        if (nomeCinema == null)
+        {
+            return _mapper.Map<List<ReadFilmeDto>>(_context.Filmes.Skip(skip).Take(take).ToList());
+        }
+        return _mapper.Map<List<ReadFilmeDto>>(_context.Filmes.Skip(skip).Take(take).Where(filme => filme.Sessoes.Any(sessao => sessao.Cinema.Nome == nomeCinema)).ToList());
+
     }
 
     [HttpGet("{id}")]
@@ -71,7 +78,7 @@ public class FilmeController : ControllerBase
     }
 
     [HttpPatch("{id}")]
-    public IActionResult AtualizaFilmeParcial(int id, 
+    public IActionResult AtualizaFilmeParcial(int id,
         JsonPatchDocument<UpdateFilmeDto> patch)
     {
         var filme = _context.Filmes.FirstOrDefault(
@@ -84,7 +91,7 @@ public class FilmeController : ControllerBase
         if (!TryValidateModel(filmeParaAtualizar))
         {
             return ValidationProblem(ModelState);
-        } 
+        }
 
         _mapper.Map(filmeParaAtualizar, filme);
         _context.SaveChanges();
